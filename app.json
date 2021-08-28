@@ -29,8 +29,13 @@
         "required": false
       }
     },
+    "addons": [
+      {
+        "plan": "heroku-postgresql"
+      }
+    ],
     "formation": {
-            "worker": {
+            "web": {
                 "quantity": 1,
                 "size": "free"
             }
