@@ -66,7 +66,7 @@ python3 generate_drive_token.py
 
 ## Deploying on Heroku
 - Give a star and Fork this repo
-- Upload **token.pickle** to your forks, or you can upload your **token.pickle** to your Index and put your **token.pickle** link to `TOKEN_PICKLE_URL`.
+- Upload **token.pickle** and **drive_folder** to your forks, or you can upload your **token.pickle** to your Index and put your **token.pickle** link to `TOKEN_PICKLE_URL`.
 
 <p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20to%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
 
