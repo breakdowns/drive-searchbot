@@ -33,7 +33,7 @@ Fill up rest of the fields. Meaning of each fields are discussed below:
 - `BOT_TOKEN`: The telegram bot token that you get from @BotFather
 - `OWNER_ID`: The Telegram user ID (not username) of the owner of the bot
 - `AUTHORIZED_CHATS`: (optional) Fill user_id and chat_id (not username) of you want to authorize, Seprate them with space, Examples: `-0123456789 -1122334455 6915401739`.
-- `TOKEN_PICKLE_URL`: Only if you want to load your **token.pickle** externally from an Index Link. Fill this with the direct link of that file.
+- `TOKEN_PICKLE_URL`: (optional) Only if you want to load your **token.pickle** externally from an Index Link. Fill this with the direct link of that file.
 ## Upgrading.
 
 If you are coming from last version where recursive searching was not possible, you must run driveid.py again and delete all previous content, and this time you just have to add Drives (Teamdrive or 'root' for Main Drive). See the section below for more.
