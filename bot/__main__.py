@@ -19,7 +19,13 @@ def log(update, context):
     sendLogFile(context.bot, update)
 
 
+botcmds = [
+        (f'{BotCommands.ListCommand}','Searches files in Drive')
+    ]
+
+
 def main():
+    bot.set_my_commands(botcmds)
 
     start_handler = CommandHandler(BotCommands.StartCommand, start, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user)
     log_handler = CommandHandler(BotCommands.LogCommand, log, filters=CustomFilters.owner_filter)
