@@ -11,7 +11,7 @@ from googleapiclient.errors import HttpError
 
 from telegram import InlineKeyboardMarkup
 from bot.helper.telegram_helper import button_builder
-from bot import DRIVE_NAME, DRIVE_ID, INDEX_URL
+from bot import DRIVE_NAME, DRIVE_ID, INDEX_URL, telegraph_token
 
 LOGGER = logging.getLogger(__name__)
 logging.getLogger('googleapiclient.discovery').setLevel(logging.ERROR)
@@ -138,14 +138,14 @@ class GoogleDriveHelper:
                 msg += f"╾────────────╼<br><b>{DRIVE_NAME[INDEX]}</b><br>╾────────────╼<br>"
                 for file in response:
                     if file.get('mimeType') == "application/vnd.google-apps.folder":  # Detect Whether Current Entity is a Folder or File.
-                        msg += f"📁<code>{file.get('name')}</code> <b>(folder)</b><br>" \
+                        msg += f"📁 <code>{file.get('name')}</code> <b>(folder)</b><br>" \
                                f"<b><a href='https://drive.google.com/drive/folders/{file.get('id')}'>Drive Link</a></b>"
                         if INDEX_URL[INDEX] is not None:
                             url_path = "/".join([requests.utils.quote(n, safe='') for n in self.get_recursive_list(file, parent_id)])
                             url = f'{INDEX_URL[INDEX]}/{url_path}/'
                             msg += f'<b> | <a href="{url}">Index Link</a></b>'
                     else:
-                        msg += f"📄<code>{file.get('name')}</code> <b>({self.get_readable_file_size(file.get('size'))})</b><br>" \
+                        msg += f"📄 <code>{file.get('name')}</code> <b>({self.get_readable_file_size(file.get('size'))})</b><br>" \
                                f"<b><a href='https://drive.google.com/uc?id={file.get('id')}&export=download'>Drive Link</a></b>"
                         if INDEX_URL[INDEX] is not None:
                             url_path = "/".join([requests.utils.quote(n, safe ='') for n in self.get_recursive_list(file, parent_id)])
@@ -165,14 +165,18 @@ class GoogleDriveHelper:
             return "No Result Found :(", None
 
         for content in self.telegraph_content :
-            self.path.append(telegra_ph.create_page(title = 'LoaderX',
-                                                html_content=content )['path'])
+            self.path.append(Telegraph(access_token=telegraph_token).create_page(
+                                                    title = 'Drive Search',
+                                                    author_name='drive-searchbot',
+                                                    author_url='https://github.com/SlamDevs/drive-searchbot',
+                                                    html_content=content
+                                                    )['path'])
 
         self.num_of_path = len(self.path)      
         if self.num_of_path > 1:
             self.edit_telegraph()
 
-        msg = f"Search Results For {fileName}"
+        msg = f"<b>Search Results For</b> <code>{fileName}</code>"
         buttons = button_builder.ButtonMaker()   
         buttons.buildbutton("VIEW", f"https://telegra.ph/{self.path[0]}")
 

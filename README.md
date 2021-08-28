@@ -64,12 +64,6 @@ pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 python3 generate_drive_token.py
 ```
 
-## Deploying on Heroku
-- Give a star and Fork this repo
-- Upload **token.pickle** and **drive_folder** to your forks, or you can upload your **token.pickle** to your Index and put your **token.pickle** link to `TOKEN_PICKLE_URL`.
-
-<p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20to%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
-
 ## Deploying on Server
 - Start docker daemon (skip if already running):
 ```
@@ -83,6 +77,13 @@ sudo docker build . -t searchbot
 ```
 sudo docker run searchbot
 ```
+
+## Deploying on Heroku
+- Give a star and Fork this repo
+- Upload **token.pickle** and **drive_folder** to your forks, for **token.pickle** you also can upload your **token.pickle** to your Index and put your **token.pickle** link to `TOKEN_PICKLE_URL`.
+- Hit the **DEPLOY TO HEROKU** button and follow the further instructions in the screen (**NOTE**: If vars not coming, just change deploy link to your fork, Example: `https://dashboard.heroku.com/new?template=https://github.com/yourgithubname/drive-searchbot`)
+
+<p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20to%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
 
 # Credits:
 
