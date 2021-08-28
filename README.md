@@ -5,7 +5,7 @@ This is a telegram bot writen in Python for searching files in Drive. Based on [
 
 - Clone this repo:
 ```
-git clone https://github.com/SlamDevs/SearchX-bot drive-searchbot/
+git clone https://github.com/SlamDevs/drive-searchbot searchbot/
 cd searchbot
 ```
 
