@@ -1,0 +1,38 @@
+{
+    "name": "drive-searchbot",
+    "description": "A Telegram bot for search file from your Google Drive",
+    "logo": "https://telegra.ph/file/6507910fd06d18dfaba82.jpg",
+    "keywords": [
+      "bot",
+      "telegram",
+      "python"
+    ],
+    "repository": "https://github.com/SlamDevs",
+    "website": "https://github.com/SlamDevs",
+    "success_url": "https://t.me/SlamMirrorUpdates",
+    "stack": "container",
+    "env": {
+      "BOT_TOKEN": {
+        "description": "The Telegram bot token that you get from @BotFather.",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "The Telegram User ID of the Owner of the Bot. Get it by using /info in @MissRose_bot.",
+        "required": true
+      },
+      "AUTHORIZED_CHATS": {
+        "description": "Fill User ID and Chat ID of you want to authorize, Seprate them with space.",
+        "required": false
+       },
+      "TOKEN_PICKLE_URL": {
+        "description": "(Optional) Only if you want to load your token.pickle externally from an index link. Fill this with the direct link of that file.",
+        "required": false
+      }
+    },
+    "formation": {
+            "worker": {
+                "quantity": 1,
+                "size": "free"
+            }
+      }
+}

@@ -96,5 +96,3 @@ unauthorize_handler = CommandHandler(command=BotCommands.UnAuthorizeCommand, cal
 dispatcher.add_handler(send_auth_handler)
 dispatcher.add_handler(authorize_handler)
 dispatcher.add_handler(unauthorize_handler)
-
-
