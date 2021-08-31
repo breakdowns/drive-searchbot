@@ -84,23 +84,31 @@ class GoogleDriveHelper:
 
     def drive_query(self, parent_id, fileName):
         query = f"name contains '{fileName}' and trashed=false"
-        if parent_id != "root":
-            response = self.__service.files().list(supportsTeamDrives=True,
-                                               includeTeamDriveItems=True,
-                                               teamDriveId=parent_id,
-                                               q=query,
-                                               corpora='drive',
-                                               spaces='drive',
-                                               pageSize=200,
-                                               fields='files(id, name, mimeType, size, teamDriveId, parents)',
-                                               orderBy='folder, modifiedTime desc').execute()["files"]
-        else:
-            response = self.__service.files().list(q=query + " and 'me' in owners",
-                                               pageSize=200,
-                                               spaces='drive',
-                                               fields='files(id, name, mimeType, size, parents)',
-                                               orderBy='folder, modifiedTime desc').execute()["files"]
-        return response
+        return (
+            self.__service.files()
+            .list(
+                supportsTeamDrives=True,
+                includeTeamDriveItems=True,
+                teamDriveId=parent_id,
+                q=query,
+                corpora='drive',
+                spaces='drive',
+                pageSize=200,
+                fields='files(id, name, mimeType, size, teamDriveId, parents)',
+                orderBy='folder, modifiedTime desc',
+            )
+            .execute()["files"]
+            if parent_id != "root"
+            else self.__service.files()
+            .list(
+                q=query + " and 'me' in owners",
+                pageSize=200,
+                spaces='drive',
+                fields='files(id, name, mimeType, size, parents)',
+                orderBy='folder, modifiedTime desc',
+            )
+            .execute()["files"]
+        )
 
     def edit_telegraph(self):
         nxt_page = 1 
@@ -125,14 +133,12 @@ class GoogleDriveHelper:
 
     def drive_list(self, fileName):
         msg = ''
-        INDEX = -1
         content_count = 0
         add_title_msg = True
-        for parent_id in DRIVE_ID :
-            response = self.drive_query(parent_id, fileName)    
-            INDEX += 1          
+        for INDEX, parent_id in enumerate(DRIVE_ID):
+            response = self.drive_query(parent_id, fileName)
             if response:
-                if add_title_msg == True:
+                if add_title_msg:
                     msg = f'<h3>Search Results for: {fileName}</h3><br>drive-searchbot<br><br>'
                     add_title_msg = False
                 msg += f"╾────────────╼<br><b>{DRIVE_NAME[INDEX]}</b><br>╾────────────╼<br>"
@@ -141,7 +147,11 @@ class GoogleDriveHelper:
                         msg += f"📁 <code>{file.get('name')}</code> <b>(folder)</b><br>" \
                                f"<b><a href='https://drive.google.com/drive/folders/{file.get('id')}'>Drive Link</a></b>"
                         if INDEX_URL[INDEX] is not None:
-                            url_path = "/".join([requests.utils.quote(n, safe='') for n in self.get_recursive_list(file, parent_id)])
+                            url_path = "/".join(
+                                requests.utils.quote(n, safe='')
+                                for n in self.get_recursive_list(file, parent_id)
+                            )
+
                             url = f'{INDEX_URL[INDEX]}/{url_path}/'
                             msg += f'<b> | <a href="{url}">Index Link</a></b>'
                     else:
@@ -172,12 +182,12 @@ class GoogleDriveHelper:
                                                     html_content=content
                                                     )['path'])
 
-        self.num_of_path = len(self.path)      
+        self.num_of_path = len(self.path)
         if self.num_of_path > 1:
             self.edit_telegraph()
 
         msg = f"<b>Search Results For</b> <code>{fileName}</code>"
-        buttons = button_builder.ButtonMaker()   
+        buttons = button_builder.ButtonMaker()
         buttons.buildbutton("VIEW", f"https://telegra.ph/{self.path[0]}")
 
         return msg, InlineKeyboardMarkup(buttons.build_menu(1))
