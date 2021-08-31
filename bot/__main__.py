@@ -8,9 +8,7 @@ from .modules import authorize, list
 
 @run_async
 def start(update, context):
-    start_string = f'''
-This bot can search file from your Google Drive!
-'''
+    start_string = '\x1fThis bot can search file from your Google Drive!\x1f'
     sendMessage(start_string, context.bot, update)
 
 

@@ -1,5 +1,5 @@
 # What is this repo about?
-This is a telegram bot writen in Python for searching files in Drive. Based on [SearchX-bot](https://github.com/SVR666/SearchX-bot)
+This is a Telegram bot writen in Python for searching files in Drive. Based on [SearchX-bot](https://github.com/SVR666/SearchX-bot)
 
 # How to deploy?
 
@@ -30,7 +30,7 @@ cp config_sample.env config.env
 _____REMOVE_THIS_LINE_____=True
 ```
 Fill up rest of the fields. Meaning of each fields are discussed below:
-- `BOT_TOKEN`: The telegram bot token that you get from @BotFather
+- `BOT_TOKEN`: The telegram bot token that you get from [@BotFather](https://t.me/BotFather)
 - `OWNER_ID`: The Telegram user ID (not username) of the owner of the bot
 - `AUTHORIZED_CHATS`: (optional) Fill user_id and chat_id (not username) of you want to authorize, Seprate them with space, Examples: `-0123456789 -1122334455 6915401739`.
 - `TOKEN_PICKLE_URL`: (optional) Only if you want to load your **token.pickle** externally from an Index Link. Fill this with the direct link of that file.

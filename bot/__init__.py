@@ -86,9 +86,7 @@ if os.path.exists('drive_folder'):
             except:
                 LIB_URL.append(None)
 
-if DRIVE_ID :
-    pass
-else :
+if not DRIVE_ID:
     LOGGER.error("The README.md file there to be read! Exiting now!")
     exit(1)
 
