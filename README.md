@@ -1,4 +1,11 @@
 # What is this repo about?
+![GitHub Repo stars](https://img.shields.io/github/stars/SlamDevs/drive-searchbot?color=blue&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/SlamDevs/drive-searchbot?color=green&style=flat)
+![GitHub contributors](https://img.shields.io/github/contributors/SlamDevs/drive-searchbot?style=flat)
+![GitHub watchers](https://img.shields.io/github/watchers/SlamDevs/drive-searchbot)
+![Docker Pulls](https://img.shields.io/docker/pulls/breakdowns/mega-sdk-python?label=Docker%20Pull)
+[![Channel](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/SlamDevs)
+
 This is a Telegram bot writen in Python for searching files in Drive. Based on [SearchX-bot](https://github.com/SVR666/SearchX-bot)
 
 # How to deploy?
