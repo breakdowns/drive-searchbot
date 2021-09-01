@@ -70,26 +70,6 @@ DRIVE_ID = []
 INDEX_URL = []
 LIB_URL = []
 
-if os.path.exists('drive_folder'):
-    with open('drive_folder', 'r+') as f:
-        lines = f.readlines()
-        for line in lines:
-            temp = line.strip().split()
-            DRIVE_NAME.append(temp[0].replace("_", " "))
-            DRIVE_ID.append(temp[1])
-            try:
-                INDEX_URL.append(temp[2])
-            except IndexError as e:
-                INDEX_URL.append(None)
-            try:
-                LIB_URL.append(temp[3])
-            except:
-                LIB_URL.append(None)
-
-if not DRIVE_ID:
-    LOGGER.error("The README.md file there to be read! Exiting now!")
-    exit(1)
-
 try:
     TOKEN_PICKLE_URL = getConfig('TOKEN_PICKLE_URL')
     if len(TOKEN_PICKLE_URL) == 0:
@@ -110,6 +90,26 @@ try:
             logging.error(out)
 except KeyError:
     DRIVE_FOLDER_URL = None
+
+if os.path.exists('drive_folder'):
+    with open('drive_folder', 'r+') as f:
+        lines = f.readlines()
+        for line in lines:
+            temp = line.strip().split()
+            DRIVE_NAME.append(temp[0].replace("_", " "))
+            DRIVE_ID.append(temp[1])
+            try:
+                INDEX_URL.append(temp[2])
+            except IndexError as e:
+                INDEX_URL.append(None)
+            try:
+                LIB_URL.append(temp[3])
+            except:
+                LIB_URL.append(None)
+
+if not DRIVE_ID:
+    LOGGER.error("The README.md file there to be read! Exiting now!")
+    exit(1)
 
 updater = tg.Updater(token=BOT_TOKEN, use_context=True)
 bot = updater.bot
