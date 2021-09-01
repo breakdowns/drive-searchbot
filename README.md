@@ -89,7 +89,7 @@ sudo docker run searchbot
 
 ## Deploying on Heroku
 - Give a star and Fork this repo
-- Upload **token.pickle** and **drive_folder** to your forks, or you can upload your **token.pickle** and **drive_folder to your Index and put your **token.pickle** and **drive_folder** link to `TOKEN_PICKLE_URL` and `DRIVE_FOLDER_URL`.
+- Upload **token.pickle** and **drive_folder** to your forks, or you can upload your **token.pickle** and **drive_folder** to your Index and put your **token.pickle** and **drive_folder** link to `TOKEN_PICKLE_URL` and `DRIVE_FOLDER_URL`.
 - Hit the **DEPLOY TO HEROKU** button and follow the further instructions in the screen (**NOTE**: If vars not coming, just change deploy link to your fork, Example: `https://dashboard.heroku.com/new?template=https://github.com/yourgithubname/drive-searchbot`)
 
 <p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20to%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
