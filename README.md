@@ -34,7 +34,7 @@ Fill up rest of the fields. Meaning of each fields are discussed below:
 - `OWNER_ID`: The Telegram user ID (not username) of the owner of the bot
 - `AUTHORIZED_CHATS`: (optional) Fill user_id and chat_id (not username) of you want to authorize, Seprate them with space, Examples: `-0123456789 -1122334455 6915401739`.
 - `TOKEN_PICKLE_URL`: (optional) Only if you want to load your **token.pickle** externally from an Index Link. Fill this with the direct link of that file.
-- `DRUVE_FOLDER_URL`: (optional) Only if you want to load your **drive_folder** externally from an Index Link. Fill this with the direct link of that file.
+- `DRIVE_FOLDER_URL`: (optional) Only if you want to load your **drive_folder** externally from an Index Link. Fill this with the direct link of that file.
 
 ## Upgrading.
 
