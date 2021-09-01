@@ -100,6 +100,16 @@ try:
             logging.error(out)
 except KeyError:
     TOKEN_PICKLE_URL = None
+try:
+    DRIVE_FOLDER_URL = getConfig('DRIVE_FOLDER_URL')
+    if len(DRIVE_FOLDER_URL) == 0:
+        DRIVE_FOLDER_URL = None
+    else:
+        out = subprocess.run(["wget", "-q", "-O", "drive_folder", DRIVE_FOLDER_URL])
+        if out.returncode != 0:
+            logging.error(out)
+except KeyError:
+    DRIVE_FOLDER_URL = None
 
 updater = tg.Updater(token=BOT_TOKEN, use_context=True)
 bot = updater.bot
