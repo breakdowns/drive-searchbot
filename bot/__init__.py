@@ -70,6 +70,27 @@ DRIVE_ID = []
 INDEX_URL = []
 LIB_URL = []
 
+try:
+    TOKEN_PICKLE_URL = getConfig('TOKEN_PICKLE_URL')
+    if len(TOKEN_PICKLE_URL) == 0:
+        TOKEN_PICKLE_URL = None
+    else:
+        out = subprocess.run(["wget", "-q", "-O", "token.pickle", TOKEN_PICKLE_URL])
+        if out.returncode != 0:
+            logging.error(out)
+except KeyError:
+    TOKEN_PICKLE_URL = None
+try:
+    DRIVE_FOLDER_URL = getConfig('DRIVE_FOLDER_URL')
+    if len(DRIVE_FOLDER_URL) == 0:
+        DRIVE_FOLDER_URL = None
+    else:
+        out = subprocess.run(["wget", "-q", "-O", "drive_folder", DRIVE_FOLDER_URL])
+        if out.returncode != 0:
+            logging.error(out)
+except KeyError:
+    DRIVE_FOLDER_URL = None
+
 if os.path.exists('drive_folder'):
     with open('drive_folder', 'r+') as f:
         lines = f.readlines()
@@ -89,17 +110,6 @@ if os.path.exists('drive_folder'):
 if not DRIVE_ID:
     LOGGER.error("The README.md file there to be read! Exiting now!")
     exit(1)
-
-try:
-    TOKEN_PICKLE_URL = getConfig('TOKEN_PICKLE_URL')
-    if len(TOKEN_PICKLE_URL) == 0:
-        TOKEN_PICKLE_URL = None
-    else:
-        out = subprocess.run(["wget", "-q", "-O", "token.pickle", TOKEN_PICKLE_URL])
-        if out.returncode != 0:
-            logging.error(out)
-except KeyError:
-    TOKEN_PICKLE_URL = None
 
 updater = tg.Updater(token=BOT_TOKEN, use_context=True)
 bot = updater.bot

@@ -27,6 +27,10 @@
       "TOKEN_PICKLE_URL": {
         "description": "(Optional) Only if you want to load your token.pickle externally from an index link. Fill this with the direct link of that file.",
         "required": false
+      },
+      "DRIVE_FOLDER_URL": {
+        "description": "(Optional) Only if you want to load your drive_folder externally from an index link. Fill this with the direct link of that file.",
+        "required": true
       }
     },
     "addons": [

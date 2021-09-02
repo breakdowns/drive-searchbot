@@ -1,4 +1,11 @@
-# What is this repo about?
+# Drive Search Bot
+![GitHub Repo stars](https://img.shields.io/github/stars/SlamDevs/drive-searchbot?color=blue&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/SlamDevs/drive-searchbot?color=green&style=flat)
+![GitHub contributors](https://img.shields.io/github/contributors/SlamDevs/drive-searchbot?style=flat)
+![GitHub watchers](https://img.shields.io/github/watchers/SlamDevs/drive-searchbot)
+![Docker Pulls](https://img.shields.io/docker/pulls/breakdowns/mega-sdk-python?label=Docker%20Pull)
+[![Channel](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/SlamDevs)
+
 This is a Telegram bot writen in Python for searching files in Drive. Based on [SearchX-bot](https://github.com/SVR666/SearchX-bot)
 
 # How to deploy?
@@ -34,6 +41,8 @@ Fill up rest of the fields. Meaning of each fields are discussed below:
 - `OWNER_ID`: The Telegram user ID (not username) of the owner of the bot
 - `AUTHORIZED_CHATS`: (optional) Fill user_id and chat_id (not username) of you want to authorize, Seprate them with space, Examples: `-0123456789 -1122334455 6915401739`.
 - `TOKEN_PICKLE_URL`: (optional) Only if you want to load your **token.pickle** externally from an Index Link. Fill this with the direct link of that file.
+- `DRIVE_FOLDER_URL`: (optional) Only if you want to load your **drive_folder** externally from an Index Link. Fill this with the direct link of that file.
+
 ## Upgrading.
 
 If you are coming from last version where recursive searching was not possible, you must run driveid.py again and delete all previous content, and this time you just have to add Drives (Teamdrive or 'root' for Main Drive). See the section below for more.
@@ -80,7 +89,7 @@ sudo docker run searchbot
 
 ## Deploying on Heroku
 - Give a star and Fork this repo
-- Upload **token.pickle** and **drive_folder** to your forks, for **token.pickle** you also can upload your **token.pickle** to your Index and put your **token.pickle** link to `TOKEN_PICKLE_URL`.
+- Upload **token.pickle** and **drive_folder** to your forks, or you can upload your **token.pickle** and **drive_folder** to your Index and put your **token.pickle** and **drive_folder** link to `TOKEN_PICKLE_URL` and `DRIVE_FOLDER_URL`.
 - Hit the **DEPLOY TO HEROKU** button and follow the further instructions in the screen (**NOTE**: If vars not coming, just change deploy link to your fork, Example: `https://dashboard.heroku.com/new?template=https://github.com/yourgithubname/drive-searchbot`)
 
 <p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20to%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
@@ -89,3 +98,5 @@ sudo docker run searchbot
 
 - [`lzzy12`](https://github.com/lzzy12)
 - [`SVR666`](https://github.com/SVR666)
+
+And many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/SlamDevs/drive-searchbot/graphs/contributors).
