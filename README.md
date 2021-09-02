@@ -94,6 +94,9 @@ sudo docker run searchbot
 
 <p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20to%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
 
+## Deploying on Railway
+<p><a href="https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FSlamDevs%2Fdrive-searchbot&plugins=postgresql&envs=BOT_TOKEN%2COWNER_ID%2CAUTHORIZED_CHATS%2CTOKEN_PICKLE_URL%2CDRIVE_FOLDER_URL&optionalEnvs=AUTHORIZED_CHATS%2CTOKEN_PICKLE_URL%2CDRIVE_FOLDER_URL&BOT_TOKENDesc=The+Telegram+bot+token+that+you+get+from+%40BotFather.&OWNER_IDDesc=The+Telegram+User+ID+of+the+Owner+of+the+Bot.+Get+it+by+using+%2Finfo+in+%40MissRose_bot.&AUTHORIZED_CHATSDesc=%28optional%29+Fill+User+ID+and+Chat+ID+of+you+want+to+authorize%2C+Seprate+them+with+space.&TOKEN_PICKLE_URLDesc=%28Optional%29+Only+if+you+want+to+load+your+token.pickle+externally+from+an+index+link.+Fill+this+with+the+direct+link+of+that+file.&DRIVE_FOLDER_URLDesc=%28Optional%29+Only+if+you+want+to+load+your+drive_folder+externally+from+an+index+link.+Fill+this+with+the+direct+link+of+that+file."> <img src="https://img.shields.io/badge/Deploy%20to%20Railway-blueviolet?style=for-the-badge&logo=railway" width="200""/></a></p>
+
 # Credits:
 
 - [`lzzy12`](https://github.com/lzzy12)
