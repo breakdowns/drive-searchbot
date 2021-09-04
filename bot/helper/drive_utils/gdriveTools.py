@@ -127,7 +127,7 @@ class GoogleDriveHelper:
             telegra_ph.edit_page(path = self.path[prev_page],
                                  title = 'Drive Search',
                                  author_name='drive-searchbot',
-                                 author_url='https://github.com/SlamDevs/drive-searchbot',
+                                 author_url='https://github.com/breakdowns/drive-searchbot',
                                  html_content=content)
         return
 
@@ -178,7 +178,7 @@ class GoogleDriveHelper:
             self.path.append(Telegraph(access_token=telegraph_token).create_page(
                                                     title = 'Drive Search',
                                                     author_name='drive-searchbot',
-                                                    author_url='https://github.com/SlamDevs/drive-searchbot',
+                                                    author_url='https://github.com/breakdowns/drive-searchbot',
                                                     html_content=content
                                                     )['path'])
 
