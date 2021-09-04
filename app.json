@@ -7,9 +7,9 @@
       "telegram",
       "python"
     ],
-    "repository": "https://github.com/SlamDevs",
-    "website": "https://github.com/SlamDevs",
-    "success_url": "https://t.me/SlamMirrorUpdates",
+    "repository": "https://github.com/breakdowns/drive-searchbot",
+    "website": "https://github.com/breakdowns",
+    "success_url": "https://t.me/SlamDevs",
     "stack": "container",
     "env": {
       "BOT_TOKEN": {
