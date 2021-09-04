@@ -1,9 +1,4 @@
 # Drive Search Bot
-![GitHub Repo stars](https://img.shields.io/github/stars/breakdowns/drive-searchbot?color=blue&style=flat)
-![GitHub forks](https://img.shields.io/github/forks/breakdowns/drive-searchbot?color=green&style=flat)
-![GitHub contributors](https://img.shields.io/github/contributors/breakdowns/drive-searchbot?style=flat)
-![GitHub watchers](https://img.shields.io/github/watchers/breakdowns/drive-searchbot)
-[![Channel](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/SlamDevs)
 
 This is a Telegram bot writen in Python for searching files in Drive. Based on [SearchX-bot](https://github.com/SVR666/SearchX-bot)
 
