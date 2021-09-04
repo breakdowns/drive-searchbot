@@ -68,7 +68,6 @@ telegraph_token = telegraph.get_access_token()
 DRIVE_NAME = []
 DRIVE_ID = []
 INDEX_URL = []
-LIB_URL = []
 
 try:
     TOKEN_PICKLE_URL = getConfig('TOKEN_PICKLE_URL')
@@ -102,10 +101,6 @@ if os.path.exists('drive_folder'):
                 INDEX_URL.append(temp[2])
             except IndexError as e:
                 INDEX_URL.append(None)
-            try:
-                LIB_URL.append(temp[3])
-            except:
-                LIB_URL.append(None)
 
 if not DRIVE_ID:
     LOGGER.error("The README.md file there to be read! Exiting now!")
