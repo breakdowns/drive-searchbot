@@ -1,9 +1,8 @@
 # Drive Search Bot
-![GitHub Repo stars](https://img.shields.io/github/stars/SlamDevs/drive-searchbot?color=blue&style=flat)
-![GitHub forks](https://img.shields.io/github/forks/SlamDevs/drive-searchbot?color=green&style=flat)
-![GitHub contributors](https://img.shields.io/github/contributors/SlamDevs/drive-searchbot?style=flat)
-![GitHub watchers](https://img.shields.io/github/watchers/SlamDevs/drive-searchbot)
-![Docker Pulls](https://img.shields.io/docker/pulls/breakdowns/mega-sdk-python?label=Docker%20Pull)
+![GitHub Repo stars](https://img.shields.io/github/stars/breakdowns/drive-searchbot?color=blue&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/breakdowns/drive-searchbot?color=green&style=flat)
+![GitHub contributors](https://img.shields.io/github/contributors/breakdowns/drive-searchbot?style=flat)
+![GitHub watchers](https://img.shields.io/github/watchers/breakdowns/drive-searchbot)
 [![Channel](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/SlamDevs)
 
 This is a Telegram bot writen in Python for searching files in Drive. Based on [SearchX-bot](https://github.com/SVR666/SearchX-bot)
@@ -12,7 +11,7 @@ This is a Telegram bot writen in Python for searching files in Drive. Based on [
 
 - Clone this repo:
 ```
-git clone https://github.com/SlamDevs/drive-searchbot searchbot/
+git clone https://github.com/breakdowns/drive-searchbot searchbot/
 cd searchbot
 ```
 
@@ -99,11 +98,11 @@ sudo docker run searchbot
 - Upload **token.pickle** and **drive_folder** to your forks, or you can upload your **token.pickle** and **drive_folder** to your Index and put your **token.pickle** and **drive_folder** link to `TOKEN_PICKLE_URL` and `DRIVE_FOLDER_URL`.
 - Hit the **DEPLOY TO RAILWAY** button and follow the further instructions in the screen.
 
-<p><a href="https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FSlamDevs%2Fdrive-searchbot&plugins=postgresql&envs=BOT_TOKEN%2COWNER_ID%2CAUTHORIZED_CHATS%2CTOKEN_PICKLE_URL%2CDRIVE_FOLDER_URL&optionalEnvs=AUTHORIZED_CHATS%2CTOKEN_PICKLE_URL%2CDRIVE_FOLDER_URL&BOT_TOKENDesc=The+Telegram+bot+token+that+you+get+from+%40BotFather.&OWNER_IDDesc=The+Telegram+User+ID+of+the+Owner+of+the+Bot.+Get+it+by+using+%2Finfo+in+%40MissRose_bot.&AUTHORIZED_CHATSDesc=%28optional%29+Fill+User+ID+and+Chat+ID+of+you+want+to+authorize%2C+Seprate+them+with+space.&TOKEN_PICKLE_URLDesc=%28Optional%29+Only+if+you+want+to+load+your+token.pickle+externally+from+an+index+link.+Fill+this+with+the+direct+link+of+that+file.&DRIVE_FOLDER_URLDesc=%28Optional%29+Only+if+you+want+to+load+your+drive_folder+externally+from+an+index+link.+Fill+this+with+the+direct+link+of+that+file."> <img src="https://img.shields.io/badge/Deploy%20to%20Railway-blueviolet?style=for-the-badge&logo=railway" width="200""/></a></p>
+<p><a href="https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fbreakdowns%2Fdrive-searchbot&plugins=postgresql&envs=BOT_TOKEN%2COWNER_ID%2CAUTHORIZED_CHATS%2CTOKEN_PICKLE_URL%2CDRIVE_FOLDER_URL&optionalEnvs=AUTHORIZED_CHATS%2CTOKEN_PICKLE_URL%2CDRIVE_FOLDER_URL&BOT_TOKENDesc=The+Telegram+bot+token+that+you+get+from+%40BotFather.&OWNER_IDDesc=The+Telegram+User+ID+of+the+Owner+of+the+Bot.+Get+it+by+using+%2Finfo+in+%40MissRose_bot.&AUTHORIZED_CHATSDesc=%28optional%29+Fill+User+ID+and+Chat+ID+of+you+want+to+authorize%2C+Seprate+them+with+space.&TOKEN_PICKLE_URLDesc=%28Optional%29+Only+if+you+want+to+load+your+token.pickle+externally+from+an+index+link.+Fill+this+with+the+direct+link+of+that+file.&DRIVE_FOLDER_URLDesc=%28Optional%29+Only+if+you+want+to+load+your+drive_folder+externally+from+an+index+link.+Fill+this+with+the+direct+link+of+that+file."> <img src="https://img.shields.io/badge/Deploy%20to%20Railway-blueviolet?style=for-the-badge&logo=railway" width="200""/></a></p>
 
 # Credits:
 
 - [`lzzy12`](https://github.com/lzzy12)
 - [`SVR666`](https://github.com/SVR666)
 
-And many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/SlamDevs/drive-searchbot/graphs/contributors).
+And many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/breakdowns/drive-searchbot/graphs/contributors).
