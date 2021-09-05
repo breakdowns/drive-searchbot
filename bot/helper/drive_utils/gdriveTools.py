@@ -124,7 +124,7 @@ class GoogleDriveHelper:
                 if nxt_page < self.num_of_path:
                     content += f'<b> | <a href="https://telegra.ph/{self.path[nxt_page]}">Next</a></b>'
                     nxt_page += 1
-            telegra_ph.edit_page(path = self.path[prev_page],
+            Telegraph(access_token=telegraph_token).edit_page(path = self.path[prev_page],
                                  title = 'Drive Search',
                                  author_name='drive-searchbot',
                                  author_url='https://github.com/breakdowns/drive-searchbot',
